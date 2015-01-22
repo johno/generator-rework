@@ -38,7 +38,7 @@ npm install -g generator-rework
 ## Usage
 
 ```bash
-yo p
+yo rework
 ```
 
 You will then be prompted for some information that will be used to generate a rework project.
