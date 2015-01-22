@@ -1,7 +1,7 @@
 {
   "name": "generator-rework",
   "version": "0.0.0",
-  "description": "Yeoman generator",
+  "description": "A minimal yeoman generator for a web project using gulp, rework, and autoprefixer.",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "johnotander/generator-rework",

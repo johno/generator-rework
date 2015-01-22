@@ -10,18 +10,20 @@ describe('rework:app', function () {
     helpers.run(path.join(__dirname, '../app'))
       .inDir(path.join(os.tmpdir(), './temp-test'))
       .withOptions({ 'skip-install': true })
-      .withPrompt({
-        someOption: true
-      })
+      .withPrompt({})
       .on('end', done);
   });
 
-  it('creates files', function () {
+  it('creates the correct files', function () {
+
     assert.file([
-      'bower.json',
-      'package.json',
-      '.editorconfig',
-      '.jshintrc'
+      'rework-project/gulpfile.js',
+      'rework-project/index.html',
+      'rework-project/css/src/all.css',
+      'rework-project/README.md',
+      'rework-project/.gitignore',
+      'rework-project/package.json',
+      'rework-project/.editorconfig'
     ]);
   });
 });

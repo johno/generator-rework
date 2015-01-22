@@ -1,9 +1,9 @@
 'use strict';
+
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
-var camelize = require('camelize');
 
 var PGenerator = yeoman.generators.Base.extend({
   initializing: function () {
@@ -41,15 +41,18 @@ var PGenerator = yeoman.generators.Base.extend({
       this.twitterHandle = props.twitterHandle;
       this.description = props.description;
 
-      this.dest.mkdir(this.packageName)
+      this.dest.mkdir(this.projectName);
+      this.dest.mkdir(this.projectName + '/css');
+      this.dest.mkdir(this.projectName + '/css/src');
 
-      this.template('_README.md', this.packageName + '/README.md');
-      this.template('_gulpfile.js', this.packageName + '/gulpfile.js');
-      this.template('_package.json', this.packageName + '/package.json');
-      this.template('_index.html', this.packageName + '/index.html');
+      this.template('_README.md', this.projectName + '/README.md');
+      this.template('_gulpfile.js', this.projectName + '/gulpfile.js');
+      this.template('_package.json', this.projectName + '/package.json');
+      this.template('_index.html', this.projectName + '/index.html');
+      this.template('_all.css', this.projectName + '/css/src/all.css');
 
-      this.src.copy('editorconfig', this.packageName + '/.editorconfig');
-      this.src.copy('gitignore', this.packageName + '/.gitignore');
+      this.src.copy('editorconfig', this.projectName + '/.editorconfig');
+      this.src.copy('gitignore', this.projectName + '/.gitignore');
 
       done();
     }.bind(this));
