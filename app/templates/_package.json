@@ -1,0 +1,40 @@
+{
+  "name": "<%= projectName %>",
+  "description": "<%= description %>",
+  "author": "<%= name %>",
+  "version": "0.0.1",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= github %>/<%= projectName %>.git"
+  },
+  "keywords": [
+
+  ],
+  "bugs": {
+    "url": "https://github.com/<%= github %>/<%= projectName %>/issues"
+  },
+  "homepage": "https://github.com/<%= github %>/<%= projectName %>",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-header": "*",
+    "gulp-image-set": "*",
+    "gulp-minify-css": "*",
+    "gulp-remarkable": "*",
+    "gulp-rename": "*",
+    "gulp-rework": "*",
+    "gulp-size": "*",
+    "gulp-util": "*",
+    "rework-color-function": "*",
+    "rework-custom-media": "*",
+    "rework-flex-grid": "*",
+    "rework-matches": "*",
+    "rework-npm": "*",
+    "rework-vars": "*"
+  }
+}
