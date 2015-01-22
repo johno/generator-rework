@@ -45,7 +45,7 @@ gulp.task('css', function() {
           .pipe(size({ gzip: true, showFiles: true }))
           .pipe(prefix())
           .pipe(header(banner))
-          .pipe(rename('c'))
+          .pipe(rename('c.css'))
           .pipe(gulp.dest('css'))
           .pipe(cssmin())
           .pipe(size({ gzip: true, showFiles: true }))
